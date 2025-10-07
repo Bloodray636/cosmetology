@@ -16,12 +16,12 @@
 }
 .logo-char-bg {
 		font-family: "DM-Serif-Regula", serif !important;
-		font-size: clamp(1rem, -0.8823rem + 6.0127vw, 7.375rem) !important;
+		font-size: clamp(4rem, -0.8823rem + 6.0127vw, 7.375rem) !important;
 }
 
 .logo-char {
 		font-family: "Corinthia" !important;
-		font-size: clamp(1rem, -0.8823rem + 6.0127vw, 3.375rem) !important;
+		font-size: clamp(3rem, -0.8823rem + 6.0127vw, 3.375rem) !important;
 }
 
 p {
