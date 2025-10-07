@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+  include layout/head.pug
+  body
+    include layout/header.pug 
+    main 
+      include layout/inner.pug 
+      .advantages
+        .container 
+          .row
+            .col-12
+              form(novalidate)
+                .row 
+                  .title 
+                    h6.text-center Качественный подход
+                    h3.text-center Ответим на все вопросы
+                  .col-md-6 
+                    input.form-control(type="text" id="name" placeholder="Ваше ФИО" required)
+                  .col-md-6 
+                    input.form-control(type="email" id="mail" placeholder="Ваше email" required)
+                  .col-md-12
+                    input.form-control(type="tel" id="phone" placeholder="Ваше телефон" required)
+                  .col-12
+                    textarea.form-control(id="message" rows="3" placeholder="Ваше Сообщение")
+                  .col-12 
+                    input.form-check-input(type="checkbox" value="" id="check" required)
+                    label.form-check-label(for="invalidCheck") Я ознакомлен и согласен с условиями
+                      a(href="#") политики конфиденциальности
+                  .col-12 
+                    .btn-block.text-center
+                      button.btn.w-100.mx-auto Записаться
+    include layout/footer.pug 

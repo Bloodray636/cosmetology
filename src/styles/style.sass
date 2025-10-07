@@ -1,0 +1,163 @@
+@import "base/fs.sass"
+@import "base/header.sass"
+@import "base/footer.sass"
+@import "components/breadcrumb.sass"
+@import "vars/fonts.sass"
+@import "vars/colors.sass"
+@import "vars/vars.sass"
+@import "color.sass"
+@import "mixin.sass"
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+a
+    text-decoration: none!important
+
+html
+    scroll-behavior: smooth
+body
+    overflow-x: hidden
+    @extend %btn
+
+.main-slogan
+    overflow-y: auto
+    scroll-behavior: smooth
+    margin: 70px 0px 200px 0px
+    .small-slogan
+        margin-bottom: 40px
+        .icon
+            margin-right: 20px
+            svg
+                width: 30px
+    .description
+        margin-top: 40px
+    .btn-slogan
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        gap: 40px
+        margin-top: 60px
+    .main-secodary-img
+        gap: 24px
+    .thumbnail
+        &.first
+            height: 500px
+            img
+                border-radius: 150px 30px
+        &.secondary
+            height: 240px
+            img
+                border-radius: 30px 150px 30px 100px
+        &.thirst
+            height: 240px
+            img
+                border-radius: 30px 30px 30px 100px
+
+.about
+    overflow-y: auto
+    scroll-behavior: smooth
+    .thumbnail
+        img
+            border-radius: 30px
+            max-height: 521px
+            max-width: 536px
+            object-fit: cover
+            object-position: 30% 30%
+        .about-thumbnail
+            border-radius: 30px 70px
+            position: absolute
+            top: 23%
+            right: 0
+            max-width: 281px
+            max-height: 244px
+            width: 100%
+            height: 100%
+            img
+                border-radius: 30px 70px
+                border: 10px solid $white
+        @media (max-width: 1199px)
+            .about-thumbnail
+                max-width: 160px
+        @media (max-width: 992px)
+            .about-thumbnail
+                max-width: 150px
+        @media (max-width: 767px)
+            .about-thumbnail
+                max-width: 240px
+        @media (max-width: 480px)
+            .about-thumbnail
+                max-width: 190px
+    .small-slogan
+        margin-bottom: 30px
+        .icon
+            margin-right: 20px
+            svg
+                width: 30px
+    .description
+        p 
+            letter-spacing: .2px
+    .advantages
+        .title
+            margin: 40px 0px 30px 0px
+        .icon
+            width: 50px
+            margin-right: 20px
+            svg
+                width: 100%
+                height: auto
+                
+.price
+    overflow-y: auto
+    scroll-behavior: smooth
+    margin-top: 200px
+    .small-slogan
+        margin-bottom: 30px
+        .icon
+            margin-right: 20px
+            svg
+                width: 30px
+    @extend %btn-tabs
+    .card-body img
+        height: 260px
+    .price-sum
+        border-radius: 12px
+        padding: 8px
+    .form-control
+        padding: 10px 20px
+        border-radius: 30px
+        box-shadow: none !important
+        padding-left: 50px
+    select
+        padding: 10px 20px
+        border-radius: 30px
+        box-shadow: none !important
+        height: 46px
+    .search-card svg
+        width: 24px
+        height: 24px
+        top: 12px
+        left: 18px
+        fill: $border
+
+
+.team
+    margin-top: 150px
+    .small-slogan
+        margin-bottom: 30px
+        .icon
+            margin-right: 20px
+            svg
+                width: 50px
+    .description
+        .item
+            svg
+                min-width: 50px
+                max-width: 60px
+                width: 100%
+                height: 70px
+        .list-group-item 
+            svg
+                width: 20px

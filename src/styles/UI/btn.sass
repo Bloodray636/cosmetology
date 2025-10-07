@@ -1,0 +1,92 @@
+@import "../vars/vars.sass"
+
+%btn
+    button
+        box-shadow: none!important
+        border: none
+        padding: 10px 50px!important
+        height: 52px
+        border-radius: 8px!important
+        white-space: normal
+        border-radius: 30px!important
+        @media screen and (max-width: 1199px)
+            &
+                padding: 10px 20px!important
+
+%btn-phone
+    .btn-block
+        .btn
+            padding: 14px 30px!important
+            border-radius: $radius!important
+            position: relative
+            margin-left: 65px
+            @media screen and (max-width: 1199px)
+                &
+                    padding: 10px 20px!important
+            @media screen and (max-width: 767px)
+                &
+                    padding: 10px 12px!important
+            @media screen and (max-width: 575px)
+                &
+                    margin-left: 30px!important
+            &::after
+                content: ""
+                position: absolute
+                left: -45px
+                top: 15%
+                width: 1px
+                height: 45px
+                @media screen and (max-width: 767px)
+                    &
+                        left: -30px
+                        top: 0px
+                @media screen and (max-width: 575px)
+                    &
+                        left: -15px
+            .icon
+                svg
+                    width: 16px
+                    height: 16px
+                    margin-right: 10px
+                    @media screen and (max-width: 767px)
+                        &
+                            margin-right: 0px
+
+%btn-light
+    .btn-block
+        .btn.btn-light
+            padding: 14px 30px!important
+            border-radius: $radius!important
+            margin-right: 30px!important
+            @media screen and (max-width: 1199px)
+                &
+                    padding: 10px 20px!important
+            @media screen and (max-width: 767px)
+                &
+                    margin-right: 10px!important
+                    margin-bottom: 0px
+            @media screen and (max-width: 360px)
+                &
+                    width: 100%
+                    margin-bottom: 10px
+
+%btn-dark
+    .btn-block
+        .btn.btn-dark
+            padding: 14px 30px!important
+            border-radius: $radius!important  
+            @media screen and (max-width: 1199px)
+                &
+                    padding: 10px 20px!important 
+            @media screen and (max-width: 360px)
+                &
+                    width: 100%
+
+%btn-tabs
+    .btn.btn-tabs
+        padding: 14px 30px!important
+        border-radius: $radius!important
+        margin-bottom: 10px!important
+        @media screen and (max-width: 1199px)
+            &
+                padding: 10px 20px!important

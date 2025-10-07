@@ -1,0 +1,74 @@
+@import "../vars/vars.sass"
+
+%slider
+    .owl-carousel
+        -ms-touch-action: auto
+        touch-action: auto
+        position: relative
+        z-index: 1
+        .owl-stage
+            display: -webkit-box
+            display: -moz-box
+            display: -ms-box
+            display: box
+        .owl-stage-outer
+            padding: 0
+            overflow: hidden
+        .owl-item
+            display: -webkit-box
+            display: -ms-flexbox
+            display: flex
+            -webkit-box-flex: 0
+            -ms-flex: 0 auto
+            flex: 0 auto
+            width: 100%
+        .owl-dots
+            display: none
+        .owl-prev
+            border-radius: $radius
+            display: flex
+            align-items: center
+            justify-content: center
+            border: none
+            padding: 19px
+            outline: none
+            cursor: pointer
+            width: 52px
+            height: 52px
+            overflow-x: visible
+            border-radius: 50%!important
+            span
+                display: none!important
+        .owl-next
+            border-radius: $radius
+            display: flex
+            align-items: center
+            justify-content: center
+            top: 50%
+            border-radius: 50%!important
+            border: none
+            padding: 19px!important
+            outline: none
+            cursor: pointer
+            width: 52px
+            height: 52px
+            overflow-x: visible
+            span
+                display: none!important
+        .owl-nav
+            position: absolute
+            display: block!important
+            right: 0px
+            left: 0px
+            width: 100%
+            margin: auto!important
+            bottom: -100px
+        .thumbnail
+            width: 100% !important
+            max-width: 100% !important
+            height: 100%
+            padding: 0px
+            display: flex
+            align-items: start
+            justify-content: center
+            margin: 0 auto

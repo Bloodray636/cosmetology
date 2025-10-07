@@ -1,0 +1,475 @@
+@font-face {
+		font-family: "Nunito Sans", sans-serif;
+		src: url(../../src/assets/fonts/Nuniti-Sans-Regular.ttf);
+}
+@font-face {
+		font-family: "Cormorant", serif;
+		src: url(../../src/assets/fonts/Cormorant-Regular.ttf);
+}
+p {
+		font-family: "Nunito Sans", sans-serif !important;
+}
+
+h1 {
+		font-family: "Cormorant", serif !important;
+		font-size: clamp(2rem, -0.8823rem + 6.0127vw, 4.375rem) !important;
+}
+
+h2 {
+		font-family: "Cormorant", serif !important;
+		font-size: clamp(1.75rem, 0.6881rem + 2.2152vw, 2.625rem) !important;
+}
+
+h3 {
+		font-family: "Nunito Sans", sans-serif !important;
+		font-size: clamp(1.125rem, 0.6699rem + 0.9494vw, 1.5rem) !important;
+}
+
+h5 {
+		font-family: "Cormorant", serif !important;
+		font-size: clamp(1.5rem, 1.0449rem + 0.9494vw, 1.875rem) !important;
+}
+
+h6 {
+		font-family: "Nunito Sans", sans-serif !important;
+		font-size: clamp(1rem, 0.8483rem + 0.3165vw, 1.125rem) !important;
+}
+
+.nav-link {
+		font-family: "Nunito Sans", sans-serif !important;
+		font-size: clamp(0.875rem, 0.5716rem + 0.6329vw, 1.125rem) !important;
+}
+
+.main-slogan p {
+		font-family: "Cormorant", serif !important;
+		font-size: clamp(1.125rem, 0.6699rem + 0.9494vw, 1.5rem) !important;
+}
+
+.about .description p {
+		font-family: "Nunito Sans", sans-serif !important;
+		font-size: clamp(0.875rem, 0.7233rem + 0.3165vw, 1rem) !important;
+}
+
+.btn.btn-tabs {
+		font-family: "Nunito Sans", sans-serif !important;
+		font-size: clamp(0.875rem, 0.7233rem + 0.3165vw, 1rem) !important;
+}
+
+.price-sum {
+		font-size: clamp(0.75rem, 0.71rem + 0.14vw, 0.875rem) !important;
+}
+
+.navbar {
+		margin-top: 28px;
+		padding: 24px 0px !important;
+}
+.navbar .nav-link {
+		margin: 0px 24px;
+		-webkit-transition: 0.5s ease;
+		transition: 0.5s ease;
+}
+@media (max-width: 1199px) {
+		.navbar .nav-link {
+				margin: 0px 12px !important;
+		}
+}
+@media (max-width: 992px) {
+		.navbar .nav-link {
+				margin: 16px 12px !important;
+		}
+}
+
+.list-icon {
+		gap: 30px;
+}
+.list-icon .icon-item a svg {
+		width: 20px;
+		height: 20px;
+		-webkit-transition: 0.3s ease;
+		transition: 0.3s ease;
+}
+.list-icon .icon-item a:hover svg {
+		-webkit-transform: scale(1.1);
+		        transform: scale(1.1);
+}
+
+footer {
+		margin-top: 200px;
+		padding: 60px 0px 50px 0px;
+}
+footer h3 {
+		margin-bottom: 50px;
+}
+@media screen and (max-width: 991px) {
+		footer h3 {
+				margin-top: 50px;
+		}
+}
+@media screen and (max-width: 767px) {
+		footer .navbar-brand img {
+				margin-bottom: 20px;
+		}
+}
+footer .social-icon a {
+		margin-right: 40px;
+}
+footer .social-icon a .icon {
+		width: 40px;
+		height: 40px;
+		padding: 10px;
+		border-radius: 8px;
+}
+footer .social-icon a .icon svg {
+		width: 18px;
+		height: 18px;
+}
+footer hr {
+		margin: 50px 0 !important;
+		opacity: 1 !important;
+		height: 1px;
+}
+footer .footer-menu ul {
+		margin-right: 90px;
+}
+@media screen and (max-width: 300px) {
+		footer .footer-menu ul {
+				margin-right: 30px;
+		}
+}
+footer .footer-menu ul li {
+		margin-bottom: 24px;
+}
+footer .footer-contact .item {
+		margin-bottom: 24px;
+}
+footer .footer-contact .item .icon {
+		margin-right: 12px;
+}
+footer .footer-contact .item .icon svg {
+		width: 18px;
+		height: 18px;
+}
+@media screen and (max-width: 991px) {
+		footer .footer-contact {
+				margin-bottom: 50px;
+		}
+}
+
+.breadcrumb-box {
+		padding: 65px 0 0px 0px;
+}
+
+.btn {
+		background-color: #F5A7DF !important;
+		color: #fff !important;
+}
+
+.btn-secondary {
+		color: #373435 !important;
+		background-color: transparent !important;
+}
+
+.description p, h2, h3, h6 {
+		color: #373435 !important;
+}
+
+h6 {
+		color: #797979;
+}
+
+.link {
+		color: #F5A7DF;
+}
+
+.navbar-nav.mx-auto .nav-item .nav-link {
+		color: #373435;
+}
+.navbar-nav.mx-auto .nav-item .nav-link:hover {
+		color: #F5A7DF;
+}
+
+.list-icon .icon-item a svg {
+		fill: #373435;
+}
+.list-icon .icon-item a:hover svg {
+		fill: #F5A7DF;
+}
+
+.small-slogan .icon svg {
+		fill: #F5A7DF !important;
+}
+
+.main-slogan .slogan span {
+		color: #F5A7DF;
+}
+
+.advantages .title h5 {
+		color: #F5A7DF !important;
+}
+.advantages svg {
+		fill: #F5A7DF;
+}
+
+.price .btn.btn-tabs.active {
+		color: #fff !important;
+		background-color: #F5A7DF !important;
+		border: 1px solid transparent !important;
+}
+.price .btn.btn-tabs {
+		color: #373435 !important;
+		background-color: transparent !important;
+		border: 1px solid #6c757d !important;
+}
+.price .price-sum {
+		background-color: #F5A7DF;
+		color: #fff;
+}
+.price .card .description {
+		color: #797979;
+}
+.price .subtitle span {
+		color: #F5A7DF;
+}
+.price .form-control, .price select {
+		border: 1px solid #6c757d !important;
+}
+
+.team .description .item svg,
+.team .description .list-group-item svg {
+		fill: #F5A7DF;
+}
+
+body button {
+		-webkit-box-shadow: none !important;
+		        box-shadow: none !important;
+		border: none;
+		padding: 10px 50px !important;
+		height: 52px;
+		border-radius: 8px !important;
+		white-space: normal;
+		border-radius: 30px !important;
+}
+@media screen and (max-width: 1199px) {
+		body button {
+				padding: 10px 20px !important;
+		}
+}
+
+.price .btn.btn-tabs {
+		padding: 14px 30px !important;
+		border-radius: 30px !important;
+		margin-bottom: 10px !important;
+}
+@media screen and (max-width: 1199px) {
+		.price .btn.btn-tabs {
+				padding: 10px 20px !important;
+		}
+}
+
+* {
+		margin: 0;
+		padding: 0;
+		-webkit-box-sizing: border-box;
+		        box-sizing: border-box;
+}
+
+a {
+		text-decoration: none !important;
+}
+
+html {
+		scroll-behavior: smooth;
+}
+
+body {
+		overflow-x: hidden;
+}
+
+.main-slogan {
+		overflow-y: auto;
+		scroll-behavior: smooth;
+		margin: 70px 0px 200px 0px;
+}
+.main-slogan .small-slogan {
+		margin-bottom: 40px;
+}
+.main-slogan .small-slogan .icon {
+		margin-right: 20px;
+}
+.main-slogan .small-slogan .icon svg {
+		width: 30px;
+}
+.main-slogan .description {
+		margin-top: 40px;
+}
+.main-slogan .btn-slogan {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		gap: 40px;
+		margin-top: 60px;
+}
+.main-slogan .main-secodary-img {
+		gap: 24px;
+}
+.main-slogan .thumbnail.first {
+		height: 500px;
+}
+.main-slogan .thumbnail.first img {
+		border-radius: 150px 30px;
+}
+.main-slogan .thumbnail.secondary {
+		height: 240px;
+}
+.main-slogan .thumbnail.secondary img {
+		border-radius: 30px 150px 30px 100px;
+}
+.main-slogan .thumbnail.thirst {
+		height: 240px;
+}
+.main-slogan .thumbnail.thirst img {
+		border-radius: 30px 30px 30px 100px;
+}
+
+.about {
+		overflow-y: auto;
+		scroll-behavior: smooth;
+}
+.about .thumbnail img {
+		border-radius: 30px;
+		max-height: 521px;
+		max-width: 536px;
+		-o-object-fit: cover;
+		   object-fit: cover;
+		-o-object-position: 30% 30%;
+		   object-position: 30% 30%;
+}
+.about .thumbnail .about-thumbnail {
+		border-radius: 30px 70px;
+		position: absolute;
+		top: 23%;
+		right: 0;
+		max-width: 281px;
+		max-height: 244px;
+		width: 100%;
+		height: 100%;
+}
+.about .thumbnail .about-thumbnail img {
+		border-radius: 30px 70px;
+		border: 10px solid #fff;
+}
+@media (max-width: 1199px) {
+		.about .thumbnail .about-thumbnail {
+				max-width: 160px;
+		}
+}
+@media (max-width: 992px) {
+		.about .thumbnail .about-thumbnail {
+				max-width: 150px;
+		}
+}
+@media (max-width: 767px) {
+		.about .thumbnail .about-thumbnail {
+				max-width: 240px;
+		}
+}
+@media (max-width: 480px) {
+		.about .thumbnail .about-thumbnail {
+				max-width: 190px;
+		}
+}
+.about .small-slogan {
+		margin-bottom: 30px;
+}
+.about .small-slogan .icon {
+		margin-right: 20px;
+}
+.about .small-slogan .icon svg {
+		width: 30px;
+}
+.about .description p {
+		letter-spacing: 0.2px;
+}
+.about .advantages .title {
+		margin: 40px 0px 30px 0px;
+}
+.about .advantages .icon {
+		width: 50px;
+		margin-right: 20px;
+}
+.about .advantages .icon svg {
+		width: 100%;
+		height: auto;
+}
+
+.price {
+		overflow-y: auto;
+		scroll-behavior: smooth;
+		margin-top: 200px;
+}
+.price .small-slogan {
+		margin-bottom: 30px;
+}
+.price .small-slogan .icon {
+		margin-right: 20px;
+}
+.price .small-slogan .icon svg {
+		width: 30px;
+}
+.price .card-body img {
+		height: 260px;
+}
+.price .price-sum {
+		border-radius: 12px;
+		padding: 8px;
+}
+.price .form-control {
+		padding: 10px 20px;
+		border-radius: 30px;
+		-webkit-box-shadow: none !important;
+		        box-shadow: none !important;
+		padding-left: 50px;
+}
+.price select {
+		padding: 10px 20px;
+		border-radius: 30px;
+		-webkit-box-shadow: none !important;
+		        box-shadow: none !important;
+		height: 46px;
+}
+.price .search-card svg {
+		width: 24px;
+		height: 24px;
+		top: 12px;
+		left: 18px;
+		fill: #6c757d;
+}
+
+.team {
+		margin-top: 150px;
+}
+.team .small-slogan {
+		margin-bottom: 30px;
+}
+.team .small-slogan .icon {
+		margin-right: 20px;
+}
+.team .small-slogan .icon svg {
+		width: 50px;
+}
+.team .description .item svg {
+		min-width: 50px;
+		max-width: 60px;
+		width: 100%;
+		height: 70px;
+}
+.team .description .list-group-item svg {
+		width: 20px;
+}
+/*# sourceMappingURL=style.css.map */
