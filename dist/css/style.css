@@ -1,18 +1,18 @@
 @font-face {
 		font-family: "Nunito Sans", sans-serif;
-		src: url(../../src/assets/fonts/Nuniti-Sans-Regular.ttf);
+		src: url(../../src/assets/fonts/Nuniti-Sans-Regular.woff2);
 }
 @font-face {
 		font-family: "Cormorant", serif;
-		src: url(../../src/assets/fonts/Cormorant-Regular.ttf);
+		src: url(../../src/assets/fonts/Cormorant-Regular.woff2);
 }
 @font-face {
 		font-family: "DM-Serif-Regula", serif;
-		src: url(../../src/assets/fonts/DM-Serif-Regular.ttf);
+		src: url(../../src/assets/fonts/DM-Serif-Regular.woff2);
 }
 @font-face {
 		font-family: "Corinthia";
-		src: url(../../src/assets/fonts/corinthia.ttf);
+		src: url(../../src/assets/fonts/corinthia.woff2);
 }
 .logo-char-bg {
 		font-family: "DM-Serif-Regula", serif !important;
