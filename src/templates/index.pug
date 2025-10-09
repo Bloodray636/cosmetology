@@ -292,86 +292,50 @@ html(lang="en")
                               path(d="m467 33h-357c-24.813 0-45 20.187-45 45v19h-20c-24.813 0-45 20.187-45 45v292c0 24.813 20.187 45 45 45h357c24.813 0 45-20.187 45-45v-19h20c24.813 0 45-20.187 45-45v-292c0-24.813-20.187-45-45-45zm-357 30h357c8.271 0 15 6.729 15 15v141.002l-89.333-63.245c-5.659-4.005-13.325-3.613-18.545.954l-118.122 103.357-54.122-47.357c-5.43-4.75-13.472-4.964-19.146-.506l-87.732 68.933v-203.138c0-8.271 6.729-15 15-15zm307 371c0 8.271-6.729 15-15 15h-357c-8.271 0-15-6.729-15-15v-292c0-8.271 6.729-15 15-15h20v243c0 24.813 20.187 45 45 45h307zm50-49h-357c-8.271 0-15-6.729-15-15v-50.709l96.485-75.81 54.637 47.808c5.656 4.948 14.1 4.948 19.756 0l119.104-104.215 97.018 68.685v114.241c0 8.271-6.729 15-15 15z")
                               path(d="m256 191c25.916 0 47-21.084 47-47s-21.084-47-47-47-47 21.084-47 47 21.084 47 47 47zm0-64c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z")
                         h2.mb-0 До / После
+
+            mixin gallery-modal(modalId, imgSrc, altText)
+              .modal.fade(id=modalId tabindex="-1" aria-labelledby=`${modalId}Label` aria-hidden="true")
+                .modal-dialog.modal-dialog-centered
+                  .modal-content
+                    .modal-header.border-0
+                      button.btn-close.px-2.pb-1(type="button" data-bs-dismiss="modal" aria-label="Close")
+                    .modal-body
+                      img.w-100.h-auto.rounded(src=imgSrc, alt=altText)
+
+            mixin gallery-item(modalId, imgSrc, altText)
+              a(href="#" data-bs-toggle="modal" data-bs-target=`#${modalId}`)
+                .img-item.h-100.rounded
+                  img.w-100.h-100.object-fit-cover(src=imgSrc, alt=altText)
+                  h4.title-after.position-absolute До
+                  h4.title-before.mb-0.position-absolute После
+              +gallery-modal(modalId, imgSrc, altText)
+
+            -
+              const galleryItems = [
+                { id: 'firstModal', img: '../src/assets/img/gallery/1.jpg', alt: 'Результат процедуры 1' },
+                { id: 'secondModal', img: '../src/assets/img/gallery/2.jpg', alt: 'Результат процедуры 2' },
+                { id: 'ThreeModal', img: '../src/assets/img/gallery/3.jpg', alt: 'Результат процедуры 3' },
+                { id: 'FourModal', img: '../src/assets/img/gallery/6.jpg', alt: 'Результат процедуры 4' },
+                { id: 'FiveModal', img: '../src/assets/img/gallery/5.jpg', alt: 'Результат процедуры 5' },
+                { id: 'SixModal', img: '../src/assets/img/gallery/4.jpg', alt: 'Результат процедуры 6' }
+              ]
+
             .row
               .col-6.col-sm-6.col-lg-3.mb-3.mb-sm-3.mb-lg-0
-                a(href="#" data-bs-toggle="modal" data-bs-target="#firstModal")
-                  .img-item.h-100.rounded
-                    img.w-100.h-100.object-fit-cover(src="../src/assets/img/gallery/1.jpg", alt="")
-                    h4.title-after.position-absolute До
-                    h4.title-before.position-absolute После
-                .modal.fade#firstModal(tabindex="-1" aria-labelledby="firstModalLabel" aria-hidden="true")
-                  .modal-dialog.modal-dialog-centered
-                    .modal-content
-                      .modal-header.border-0
-                        button.btn-close.px-2.pb-1(type="button" data-bs-dismiss="modal" aria-label="Close")
-                      .modal-body
-                        img.w-100.h-auto.rounded(src="../src/assets/img/gallery/1.jpg", alt="")
+                +gallery-item('firstModal', '../src/assets/img/gallery/1.jpg', 'Результат процедуры 1')
               .col-6.col-sm-6.col-lg-3.mb-3.mb-sm-3.mb-lg-0
-                .col-12.mb-3
-                  a(href="#" data-bs-toggle="modal" data-bs-target="#secondModal")
-                    .img-item.h-100.rounded
-                      img.w-100.h-100.object-fit-cover(src="../src/assets/img/gallery/2.jpg", alt="")
-                      h4.title-after.position-absolute До
-                      h4.title-before.position-absolute После
-                  .modal.fade#secondModal(tabindex="-1" aria-labelledby="secondModalLabel" aria-hidden="true")
-                    .modal-dialog.modal-dialog-centered
-                      .modal-content
-                        .modal-header.border-0
-                          button.btn-close.px-2.pb-1(type="button" data-bs-dismiss="modal" aria-label="Close")
-                        .modal-body
-                          img.w-100.h-auto.rounded(src="../src/assets/img/gallery/2.jpg", alt="")
-                .col-12
-                  a(href="#" data-bs-toggle="modal" data-bs-target="#ThreeModal")
-                    .img-item.h-100.rounded
-                      img.w-100.h-100.object-fit-cover(src="../src/assets/img/gallery/3.jpg", alt="")
-                      h4.title-after.position-absolute До
-                      h4.title-before.position-absolute После
-                  .modal.fade#ThreeModal(tabindex="-1" aria-labelledby="ThreeModalLabel" aria-hidden="true")
-                    .modal-dialog.modal-dialog-centered
-                      .modal-content
-                        .modal-header.border-0
-                          button.btn-close.px-2.pb-1(type="button" data-bs-dismiss="modal" aria-label="Close")
-                        .modal-body
-                          img.w-100.h-auto.rounded(src="../src/assets/img/gallery/3.jpg", alt="")
+                .d-flex.flex-column.h-100
+                  .mb-3.flex-grow-1
+                    +gallery-item('secondModal', '../src/assets/img/gallery/2.jpg', 'Результат процедуры 2')
+                  .flex-grow-1
+                    +gallery-item('ThreeModal', '../src/assets/img/gallery/3.jpg', 'Результат процедуры 3')
               .col-6.col-sm-6.col-lg-3
-                .col-12.mb-3
-                  a(href="#" data-bs-toggle="modal" data-bs-target="#FourModal")
-                    .img-item.h-100.rounded
-                      img.w-100.h-100.object-fit-cover(src="../src/assets/img/gallery/6.jpg", alt="")
-                      h4.title-after.position-absolute До
-                      h4.title-before.position-absolute После
-                  .modal.fade#FourModal(tabindex="-1" aria-labelledby="FourModalLabel" aria-hidden="true")
-                    .modal-dialog.modal-dialog-centered
-                      .modal-content
-                        .modal-header.border-0
-                          button.btn-close.px-2.pb-1(type="button" data-bs-dismiss="modal" aria-label="Close")
-                        .modal-body
-                          img.w-100.h-auto.rounded(src="../src/assets/img/gallery/6.jpg", alt="")
-                .col-12
-                  a(href="#" data-bs-toggle="modal" data-bs-target="#FiveModal")
-                    .img-item.h-100.rounded
-                      img.w-100.h-100.object-fit-cover(src="../src/assets/img/gallery/5.jpg", alt="")
-                      h4.title-after.position-absolute До
-                      h4.title-before.position-absolute После
-                  .modal.fade#FiveModal(tabindex="-1" aria-labelledby="FiveModalLabel" aria-hidden="true")
-                    .modal-dialog.modal-dialog-centered
-                      .modal-content
-                        .modal-header.border-0
-                          button.btn-close.px-2.pb-1(type="button" data-bs-dismiss="modal" aria-label="Close")
-                        .modal-body
-                          img.w-100.h-auto.rounded(src="../src/assets/img/gallery/5.jpg", alt="")
+                .d-flex.flex-column.h-100
+                  .mb-3.flex-grow-1
+                    +gallery-item('FourModal', '../src/assets/img/gallery/6.jpg', 'Результат процедуры 4')
+                  .flex-grow-1
+                    +gallery-item('FiveModal', '../src/assets/img/gallery/5.jpg', 'Результат процедуры 5')
               .col-6.col-sm-6.col-lg-3
-                a(href="#" data-bs-toggle="modal" data-bs-target="#SixModal")
-                  .img-item.h-100.rounded
-                    img.w-100.h-100.object-fit-cover(src="../src/assets/img/gallery/4.jpg", alt="")
-                    h4.title-after.position-absolute До
-                    h4.title-before.position-absolute После
-                .modal.fade#SixModal(tabindex="-1" aria-labelledby="SixModalLabel" aria-hidden="true")
-                  .modal-dialog.modal-dialog-centered
-                    .modal-content
-                      .modal-header.border-0
-                        button.btn-close.px-2.pb-1(type="button" data-bs-dismiss="modal" aria-label="Close")
-                      .modal-body
-                        img.w-100.h-auto.rounded(src="../src/assets/img/gallery/4.jpg", alt="")
+                +gallery-item('SixModal', '../src/assets/img/gallery/4.jpg', 'Результат процедуры 6')
     include layout/footer.pug 
   include layout/assets.pug 
