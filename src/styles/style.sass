@@ -144,6 +144,10 @@ body
         justify-content: flex-start
         gap: 40px
         margin-top: 60px
+        @media (max-width: 991px)
+            &
+                margin-top: 40px
+                gap: 30px
     .main-secodary-img
         gap: 24px
     .thumbnail
@@ -212,6 +216,7 @@ body
             svg
                 width: 100%
                 height: auto
+                min-width: 50px
                 
 .price
     overflow-y: auto

@@ -74,7 +74,7 @@ h6 {
 }
 
 .price-sum {
-		font-size: clamp(0.75rem, 0.71rem + 0.14vw, 0.875rem) !important;
+		font-size: clamp(0.875rem, 0.7233rem + 0.3165vw, 1rem) !important;
 }
 
 .navbar {
@@ -85,6 +85,22 @@ h6 {
 		margin: 0px 24px;
 		-webkit-transition: 0.5s ease;
 		transition: 0.5s ease;
+		position: relative;
+}
+.navbar .nav-link::before {
+		content: "";
+		position: absolute;
+		width: 0%;
+		height: 2px;
+		bottom: -5px;
+		left: 50%;
+		background-color: #F5A7DF;
+		-webkit-transition: width 0.3s ease, left 0.3s ease;
+		transition: width 0.3s ease, left 0.3s ease;
+}
+.navbar .nav-link:hover::before {
+		width: 100%;
+		left: 0;
 }
 @media (max-width: 1199px) {
 		.navbar .nav-link {
@@ -94,6 +110,10 @@ h6 {
 @media (max-width: 992px) {
 		.navbar .nav-link {
 				margin: 16px 12px !important;
+		}
+		.navbar .nav-link:focus::before {
+				width: 100%;
+				left: 0;
 		}
 }
 
@@ -212,6 +232,11 @@ h6 {
 }
 .navbar-nav.mx-auto .nav-item .nav-link:hover {
 		color: #F5A7DF;
+}
+@media (max-width: 991px) {
+		.navbar-nav.mx-auto .nav-item .nav-link:focus {
+				color: #F5A7DF;
+		}
 }
 
 .list-icon .icon-item a svg {
@@ -513,6 +538,12 @@ body {
 		gap: 40px;
 		margin-top: 60px;
 }
+@media (max-width: 991px) {
+		.main-slogan .btn-slogan {
+				margin-top: 40px;
+				gap: 30px;
+		}
+}
 .main-slogan .main-secodary-img {
 		gap: 24px;
 }
@@ -604,6 +635,7 @@ body {
 .about .advantages .icon svg {
 		width: 100%;
 		height: auto;
+		min-width: 50px;
 }
 
 .price {
