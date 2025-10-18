@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
 		font-family: "Nunito Sans", sans-serif;
 		src: url(../../src/assets/fonts/Nuniti-Sans-Regular.woff2);
@@ -364,6 +365,12 @@ body {
 		overflow-x: hidden;
 }
 
+/* Отключаем плавный скролл для пользователей, которые предпочитают reduced motion */
+@media (prefers-reduced-motion: reduce) {
+		html {
+				scroll-behavior: auto;
+		}
+}
 .preloader {
 		position: fixed;
 		top: 0;

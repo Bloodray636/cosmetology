@@ -18,9 +18,15 @@ a
 
 html
     scroll-behavior: smooth
+    
 body
     overflow-x: hidden
     @extend %btn
+
+/* Отключаем плавный скролл для пользователей, которые предпочитают reduced motion */
+@media (prefers-reduced-motion: reduce)
+    html
+        scroll-behavior: auto
 
 
 .preloader
