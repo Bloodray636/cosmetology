@@ -485,7 +485,7 @@ tabs.forEach(tab => {
       col.innerHTML = `
         <div class="card border-0 p-0">
           <div class="card-body p-0">
-            <img src="${image}" class="d-block w-100 mb-4 rounded object-fit-cover" alt="${title}">
+            <img src="${image}" class="d-block w-100 mb-4 rounded object-fit-cover" alt="${title}" loading="lazy">
             <h4 class="mb-2">${title}</h4>
             <p class="mb-3 description"></p>
           </div>
