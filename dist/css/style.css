@@ -555,6 +555,12 @@ body {
 		width: 60px;
 		height: 60px;
 }
+@media (max-width: 767px) {
+		.back-to-top {
+				bottom: 20px;
+				right: 20px;
+		}
+}
 .back-to-top.visible {
 		opacity: 1;
 		visibility: visible;
