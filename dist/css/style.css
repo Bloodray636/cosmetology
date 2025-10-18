@@ -308,6 +308,16 @@ h6 {
 		background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.4) 100%);
 }
 
+.contact .contact-item svg {
+		fill: #373435;
+}
+.contact a {
+		color: #373435;
+}
+.contact a:hover {
+		color: #F5A7DF;
+}
+
 body button {
 		-webkit-box-shadow: none !important;
 		        box-shadow: none !important;
@@ -526,6 +536,41 @@ body {
 				background-position: 200px 200px;
 		}
 }
+.back-to-top {
+		position: fixed;
+		bottom: 40px;
+		right: 40px;
+		font-size: 24px;
+		background: #fff;
+		border-radius: 30px;
+		cursor: pointer;
+		z-index: 1000;
+		text-decoration: none;
+		opacity: 0;
+		visibility: hidden;
+		-webkit-transform: translateY(20px);
+		        transform: translateY(20px);
+		-webkit-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+		width: 60px;
+		height: 60px;
+}
+.back-to-top.visible {
+		opacity: 1;
+		visibility: visible;
+		-webkit-transform: translateY(0);
+		        transform: translateY(0);
+}
+.back-to-top:hover {
+		background: #fff;
+		text-decoration: none;
+		-webkit-transform: translateY(-12px);
+		        transform: translateY(-12px);
+}
+.back-to-top svg {
+		width: 20px;
+}
+
 .main-slogan {
 		overflow-y: auto;
 		scroll-behavior: smooth;
@@ -817,5 +862,25 @@ body {
 }
 .contact .small-slogan .icon svg {
 		width: 30px;
+}
+.contact .contact-item svg {
+		width: 40px;
+}
+.contact .contact-item a {
+		-webkit-transition: 0.5s ease;
+		transition: 0.5s ease;
+}
+.contact .list-icon {
+		gap: 30px;
+}
+.contact .list-icon .icon-item a svg {
+		width: auto;
+		height: 20px;
+		-webkit-transition: 0.3s ease;
+		transition: 0.3s ease;
+}
+.contact .list-icon .icon-item a:hover svg {
+		-webkit-transform: scale(1.1);
+		        transform: scale(1.1);
 }
 /*# sourceMappingURL=style.css.map */
