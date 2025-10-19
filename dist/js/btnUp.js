@@ -25,13 +25,13 @@ document.addEventListener("DOMContentLoaded", function () {
               behavior: 'smooth',
               block: 'start'
             });
-          }, 300); // Задержка должна совпадать с длительностью анимации offcanvas
+          }, 300);
         }
       });
     });
   }
 
-  // Код для кнопки "Наверх" с анимацией
+  // Код для кнопки "Наверх" с прогрессом рамки
   const backToTop = document.getElementById("back-to-top");
   
   if (!backToTop) {
@@ -39,14 +39,30 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
-  window.addEventListener("scroll", function () {
-    if (window.pageYOffset > 300) {
+  function updateProgress() {
+    const scrollTop = window.pageYOffset;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = Math.min(scrollTop / docHeight, 1);
+    
+    // Показываем/скрываем кнопку
+    if (scrollTop > 300) {
       backToTop.classList.add('visible');
     } else {
       backToTop.classList.remove('visible');
     }
-  });
+    
+    // Плавное заполнение рамки (от 0 до 360 градусов)
+    const progress = scrollPercent * 360;
+    backToTop.style.setProperty('--progress', `${progress}deg`);
+  }
 
+  // Слушаем скролл и обновляем прогресс
+  window.addEventListener("scroll", updateProgress);
+  
+  // Инициализируем прогресс при загрузке
+  updateProgress();
+
+  // Обработчик клика по кнопке
   backToTop.addEventListener("click", function (event) {
     event.preventDefault();
     window.scrollTo({ top: 0, behavior: "smooth" });
