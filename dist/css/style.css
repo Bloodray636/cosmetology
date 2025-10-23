@@ -46,7 +46,7 @@ h3 {
 
 h5 {
 		font-family: "Cormorant", serif !important;
-		font-size: clamp(1.5rem, 1.0449rem + 0.9494vw, 1.875rem) !important;
+		font-size: clamp(1.3rem, 1.0449rem + 0.9494vw, 1.5rem) !important;
 }
 
 h6 {
@@ -236,12 +236,18 @@ h6 {
 		background-color: transparent !important;
 		border: 1px solid #6c757d !important;
 }
-.price .price-sum {
-		background-color: #F5A7DF;
-		color: #fff;
+.price .card-footer {
+		background-color: #fff;
+		color: #373435;
+}
+.price .card-footer .link {
+		color: #373435;
 }
 .price .card .description {
 		color: #393939;
+}
+.price .card svg {
+		fill: #F5A7DF;
 }
 .price .subtitle span {
 		color: #F5A7DF;
@@ -711,12 +717,27 @@ body {
 .price .small-slogan .icon svg {
 		width: 30px;
 }
+.price .card {
+		-webkit-box-shadow: -3px 4px 30px #e3e3e3;
+		        box-shadow: -3px 4px 30px #e3e3e3;
+		border-radius: 30px;
+		-webkit-transition: 0.5s ease;
+		transition: 0.5s ease;
+}
+.price .card:hover {
+		-webkit-box-shadow: 0px 0px 61px #e3e3e3;
+		        box-shadow: 0px 0px 61px #e3e3e3;
+}
 .price .card-body img {
 		height: 260px;
+		border-radius: 24px;
+}
+.price .card-body svg {
+		width: 30px;
+		height: 30px;
 }
 .price .price-sum {
 		border-radius: 12px;
-		padding: 8px;
 }
 .price .form-control {
 		padding: 10px 20px;
@@ -738,6 +759,10 @@ body {
 		top: 12px;
 		left: 18px;
 		fill: #6c757d;
+}
+.price .card-footer {
+		padding: 10px 0px;
+		border-radius: 30px !important;
 }
 
 .team {
@@ -761,6 +786,9 @@ body {
 .team .description .list-group-item svg {
 		width: 20px;
 }
+.team img {
+		border-radius: 30px;
+}
 
 .gallery {
 		margin-top: 150px;
@@ -778,6 +806,7 @@ body {
 .gallery .img-itemSecond {
 		overflow: hidden !important;
 		position: relative;
+		border-radius: 30px;
 }
 .gallery .img-item img,
 .gallery .img-itemSecond img {
@@ -846,6 +875,9 @@ body {
 		height: 100%;
 		z-index: 2;
 }
+.gallery .modal-body img {
+		border-radius: 30px;
+}
 
 .contact {
 		margin-top: 150px;
@@ -878,5 +910,8 @@ body {
 .contact .list-icon .icon-item a:hover svg {
 		-webkit-transform: scale(1.1);
 		        transform: scale(1.1);
+}
+.contact iframe {
+		border-radius: 30px;
 }
 /*# sourceMappingURL=style.css.map */

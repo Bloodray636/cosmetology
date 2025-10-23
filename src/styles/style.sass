@@ -269,11 +269,21 @@ body
             svg
                 width: 30px
     @extend %btn-tabs
-    .card-body img
-        height: 260px
+    .card
+        box-shadow: -3px 4px 30px #e3e3e3
+        border-radius: 30px
+        transition: .5s ease
+        &:hover
+            box-shadow: 0px 0px 61px #e3e3e3
+    .card-body 
+        img
+            height: 260px
+            border-radius: 24px
+        svg
+            width: 30px
+            height: 30px
     .price-sum
         border-radius: 12px
-        padding: 8px
     .form-control
         padding: 10px 20px
         border-radius: 30px
@@ -290,6 +300,9 @@ body
         top: 12px
         left: 18px
         fill: $border
+    .card-footer
+        padding: 10px 0px
+        border-radius: 30px!important
 
 
 .team
@@ -310,6 +323,8 @@ body
         .list-group-item 
             svg
                 width: 20px
+    img
+        border-radius: 30px
 
 .gallery
     margin-top: 150px
@@ -323,6 +338,7 @@ body
     .img-itemSecond
         overflow: hidden!important
         position: relative
+        border-radius: 30px
         img
             transition: .5s ease
         &:hover 
@@ -367,6 +383,9 @@ body
             width: 100%
             height: 100%
             z-index: 2
+    .modal-body
+        img
+            border-radius: 30px
 
 .contact
     margin-top: 150px
@@ -391,3 +410,5 @@ body
                     transition: .3s ease
                 &:hover svg
                     transform: scale(1.1)
+    iframe
+        border-radius: 30px
