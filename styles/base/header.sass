@@ -1,0 +1,42 @@
+@import "vars/colors"
+@import "vars/vars"
+
+.navbar
+    margin-top: 28px
+    padding: 24px 0px!important
+    .nav-link
+        margin: 0px 24px
+        transition: .5s ease
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            width: 0%
+            height: 2px
+            bottom: -5px
+            left: 50%
+            background-color: $pink
+            transition: width 0.3s ease, left 0.3s ease
+        &:hover::before
+            width: 100%
+            left: 0
+    @media (max-width: 1199px)
+        .nav-link
+            margin: 0px 12px!important
+    @media (max-width: 992px)
+        .nav-link
+            margin: 16px 12px!important
+            &:focus::before
+                width: 100%
+                left: 0
+
+.list-icon
+    gap: 30px
+    .icon-item
+        a
+            svg
+                width: 20px
+                height: 20px
+                transition: .3s ease
+            &:hover svg
+                transform: scale(1.1)

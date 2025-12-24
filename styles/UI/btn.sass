@@ -1,0 +1,31 @@
+@import "../vars/vars.sass"
+
+%btn
+    button
+        box-shadow: none!important
+        border: none
+        padding: 10px 50px!important
+        height: 52px
+        border-radius: 8px!important
+        white-space: normal
+        border-radius: 30px!important
+        @media screen and (max-width: 1199px)
+            &
+                padding: 10px 20px!important
+        .btn-arrow-right
+            margin-left: 12px
+            margin-right: -12px
+            transition: .6s ease
+        &:hover .btn-arrow-right
+            margin-left: 20px
+            margin-right: -20px
+            
+
+%btn-tabs
+    .btn.btn-tabs
+        padding: 14px 30px!important
+        border-radius: $radius!important
+        margin-bottom: 10px!important
+        @media screen and (max-width: 1199px)
+            &
+                padding: 10px 20px!important

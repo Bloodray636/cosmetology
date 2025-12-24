@@ -1,0 +1,140 @@
+.btn
+    background-color: $pink!important
+    color: $white!important
+
+.btn-secondary
+    color: $black!important
+    background-color: transparent!important
+
+.description p, h2, h3, h6
+    color: $black!important
+
+h6
+    color: $grey
+
+.link
+    color: $pink
+
+.preloader
+    background: linear-gradient(135deg, $white 0%, $white 100%)
+
+.logo-char-bg
+    color: $slogan
+
+.back-to-top
+    background: $white
+    &::before
+        background: conic-gradient(from -90deg, $black 0deg, $black var(--progress, 0deg), transparent var(--progress, 0deg), transparent 360deg)
+        -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 4px), $white calc(100% - 3px))
+        mask: radial-gradient(farthest-side, transparent calc(100% - 4px), $white calc(100% - 3px))
+    &:hover
+        background: $white
+    svg
+        fill: $black
+    
+.navbar-nav.mx-auto
+    .nav-item
+        .nav-link
+            color: $black
+            &:hover
+                color: $pink
+        @media (max-width: 991px)
+            .nav-link
+                &:focus
+                    color: $pink
+    
+.list-icon
+    .icon-item
+        a
+            svg
+                fill: $black
+            &:hover svg
+                fill: $pink
+
+.small-slogan
+    .icon
+        svg
+            fill: $pink!important
+
+.main-slogan
+    .slogan
+        span
+            color: $pink
+
+.advantages
+    .title
+        h5
+            color: $pink!important
+    svg
+        fill: $pink
+
+.price
+    .btn.btn-tabs.active
+        color: $white!important
+        background-color: $pink!important
+        border: 1px solid transparent!important
+    .btn.btn-tabs
+        color: $black!important
+        background-color: $white!important
+        border: 1px solid $border!important
+    .card-footer
+        background-color: $white
+        color: $black
+        .link
+            color: $black
+    .card 
+        .description
+            color: $grey
+        svg
+            fill: $pink
+    .subtitle
+        span
+            color: $pink
+    .form-control, select
+        border: 1px solid $border!important
+        
+            
+.team
+    .description
+        .item,
+        .list-group-item 
+            svg
+                fill: $pink
+
+
+.gallery
+    .img-item,
+    .img-itemSecond
+        &::before
+            background: $bgImgItem
+        .title-after,
+        .title-before
+            color: $white
+    .img-itemSecond
+        &::before
+            background: $bgImgItemSecond
+
+.contact
+    .contact-item
+        svg
+            fill: $black
+    a
+        color: $black
+        &:hover
+            color: $pink
+
+footer
+    .list-group
+        &-item
+            a
+                color: $black
+                &:hover
+                    color: $pink
+
+
+.breadcrumb-box
+    background-color: $pink
+    li,a
+        color: $white!important
+    .breadcrumb-item+.breadcrumb-item::before
+        color: $white!important

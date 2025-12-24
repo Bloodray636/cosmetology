@@ -1,0 +1,82 @@
+@import "../vars/fonts.sass"
+
+@font-face
+    font-family: $regular-nunito
+    src: url(../assets/fonts/Nuniti-Sans-Regular.woff2)
+
+@font-face
+    font-family: $regular-cormorant
+    src: url(../assets/fonts/Cormorant-Regular.woff2)
+
+@font-face
+    font-family: $regular-dm-serid
+    src: url(../assets/fonts/DM-Serif-Regular.woff2)
+
+@font-face
+    font-family: $corinthia
+    src: url(../assets/fonts/corinthia.woff2)
+    
+.logo-char-bg
+    font-family: $regular-dm-serid!important
+    font-size: clamp(4rem, -0.8823rem + 6.0127vw, 7.375rem)!important
+
+.logo-char
+    font-family: $corinthia!important
+    font-size: clamp(3rem, -0.8823rem + 6.0127vw, 3.375rem)!important
+
+p
+    font-family: $regular-nunito!important
+
+h1
+    font-family: $regular-cormorant!important
+    font-size: clamp(2rem, -0.8823rem + 6.0127vw, 4.375rem)!important
+
+h2
+    font-family: $regular-cormorant!important
+    font-size: clamp(1.75rem, 0.6881rem + 2.2152vw, 2.625rem)!important
+
+h3
+    font-family: $regular-nunito!important
+    font-size: clamp(1.125rem, 0.6699rem + 0.9494vw, 1.5rem)!important
+
+h5
+    font-family: $regular-cormorant!important
+    font-size: clamp(1.3rem, 1.0449rem + 0.9494vw, 1.5rem)!important
+
+h6
+    font-family: $regular-nunito!important
+    font-size: clamp(1rem, 0.8483rem + 0.3165vw, 1.125rem)!important
+
+.nav-link
+    font-family: $regular-nunito!important
+    font-size: clamp(0.875rem, 0.5716rem + 0.6329vw, 1.125rem)!important
+
+.main-slogan p 
+    font-family: $regular-cormorant!important
+    font-size: clamp(1.125rem, 0.6699rem + 0.9494vw, 1.5rem)!important
+
+.about .description p,
+.team .description p,
+.price-sum,
+input,
+ul li,
+select,
+option
+    font-family: $regular-nunito!important
+    font-size: clamp(0.875rem, 0.7233rem + 0.3165vw, 1rem)!important
+
+.btn.btn-tabs
+    font-family: $regular-nunito!important
+    font-size: clamp(0.875rem, 0.7233rem + 0.3165vw, 1rem)!important
+
+.breadcrumb-box
+    li,a
+        font-size: 18px
+    h2
+        font-size: 56px!important
+        @media only screen and (max-width: 991px)
+            &
+                font-size: 46px!important
+        @media only screen and (max-width: 767px)
+            &
+                font-size: 36px!important

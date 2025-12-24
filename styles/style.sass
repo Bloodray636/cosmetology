@@ -1,0 +1,542 @@
+@import "base/fs.sass"
+@import "base/header.sass"
+@import "base/footer.sass"
+@import "components/breadcrumb.sass"
+@import "vars/fonts.sass"
+@import "vars/colors.sass"
+@import "vars/vars.sass"
+@import "color.sass"
+@import "mixin.sass"
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+a
+    text-decoration: none!important
+
+html
+    scroll-behavior: smooth
+    
+body
+    overflow-x: hidden
+    transition: opacity 0.3s ease
+    @extend %btn
+
+/* Отключаем плавный скролл для пользователей, которые предпочитают reduced motion */
+@media (prefers-reduced-motion: reduce)
+    html
+        scroll-behavior: auto
+
+.preloader
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 9999
+    opacity: 1
+    visibility: visible
+    transition: opacity 0.6s ease-in-out, visibility 0.6s ease-in-out
+    &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.02"><circle cx="50" cy="50" r="1" fill="%23d48a8a"/></svg>')
+        background-size: 200px 200px
+        animation: subtleShift 20s linear infinite
+    &.loaded
+        opacity: 0
+        visibility: hidden
+        pointer-events: none
+
+.preloader-inner
+    position: relative
+    &::before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 200px
+        height: 200px
+        border: 2px solid transparent
+        border-top: 2px solid $dark
+        border-radius: 50%
+        animation: spin 1.5s linear infinite
+        transform: translate(-50%, -50%)
+
+.preloader-logo
+    position: relative
+    display: inline-block
+    text-align: center
+    line-height: 1
+    white-space: nowrap
+
+.logo-char-bg
+    font-weight: 300
+    opacity: 0
+    animation: fadeInScale 1.5s ease-out forwards
+    letter-spacing: -10px
+    display: inline-block
+    transform-origin: center center
+    z-index: 1
+
+.logo-char
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    font-size: 1.3rem
+    font-weight: 400
+    color: $dark
+    opacity: 0
+    animation: fadeOnly 1.5s ease-out 0.6s forwards
+    letter-spacing: normal
+    pointer-events: none
+    z-index: 2
+
+@keyframes fadeInScale
+    from
+        opacity: 0
+        transform: scale(0.8)
+    to
+        opacity: 1
+        transform: scale(1)
+
+@keyframes fadeOnly
+    from
+        opacity: 0
+    to
+        opacity: 1
+
+@keyframes spin
+    0%
+        transform: translate(-50%, -50%) rotate(0deg)
+    100%
+        transform: translate(-50%, -50%) rotate(360deg)
+
+@keyframes subtleShift
+    from
+        background-position: 0 0
+    to
+        background-position: 200px 200px
+
+.back-to-top
+    bottom: 40px
+    right: 40px
+    font-size: 24px
+    border-radius: 50%
+    cursor: pointer
+    z-index: 1000
+    opacity: 0
+    visibility: hidden
+    transform: translateY(20px)
+    transition: all 0.3s ease-in-out
+    width: 60px
+    height: 60px
+    &::before
+        content: ''
+        position: absolute
+        top: -8px
+        left: -8px
+        right: -8px
+        bottom: -8px
+        border-radius: 50%
+    @media (max-width: 767px)
+        &
+            bottom: 20px
+            right: 20px
+    &.visible
+        opacity: 1
+        visibility: visible
+        transform: translateY(0)
+    &:hover
+        text-decoration: none
+        transform: translateY(-12px)
+    svg
+        width: 20px
+        height: 20px
+        transition: transform 0.3s ease
+    &:hover svg
+        transform: translateY(-2px)
+
+.main-slogan
+    overflow-y: auto
+    overflow-x: hidden
+    scroll-behavior: smooth
+    margin: 70px 0px 200px 0px
+    .small-slogan
+        margin-bottom: 40px
+        .icon
+            margin-right: 20px
+            svg
+                width: 30px
+    .description
+        margin-top: 40px
+    .btn-slogan
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        gap: 40px
+        margin-top: 60px
+        @media (max-width: 991px)
+            &
+                margin-top: 40px
+                gap: 30px
+    .main-secodary-img
+        gap: 24px
+    .thumbnail
+        &.first
+            height: 500px
+            img
+                border-radius: 150px 30px
+        &.secondary
+            height: 240px
+            img
+                border-radius: 30px 150px 30px 100px
+        &.thirst
+            height: 240px
+            img
+                border-radius: 30px 30px 30px 100px
+.main-bgOne
+    position: absolute
+    right: 0
+    top: 257px
+    background-repeat: no-repeat
+    background-position: right top
+    background-size: cover
+    width: 180px
+    height: 132px
+    transition: all 0.5s ease-in-out
+    z-index: -1
+    animation: floatUpDown 3s ease-in-out infinite alternate
+
+.main-bgTwo
+    position: absolute
+    left: 0
+    top: 557px
+    background-repeat: no-repeat
+    background-position: right top
+    background-size: cover
+    width: 194p
+    height: 224px
+    transition: all 0.5s ease-in-out
+    z-index: -1
+    animation: floatUpDown 3s ease-in-out infinite alternate
+
+.main-bgThree
+    position: absolute
+    right: 0
+    top: 50px
+    background-repeat: no-repeat
+    background-position: right top
+    background-size: cover
+    width: 148px
+    height: 154px
+    transition: all 0.5s ease-in-out
+    z-index: -1
+    animation: floatUpDownRotate 3s ease-in-out infinite alternate
+
+.main-bgFour
+    position: absolute
+    left: 0
+    bottom: 0
+    background-repeat: no-repeat
+    background-position: right top
+    background-size: cover
+    width: 240px
+    height: 194px
+    transition: all 0.5s ease-in-out
+    z-index: -1
+    animation: floatUpDown 3s ease-in-out infinite alternate
+
+.main-bgFive
+    position: absolute
+    left: 0
+    top: 0
+    background-repeat: no-repeat
+    background-position: right top
+    background-size: cover
+    width: 194px
+    height: 224px
+    transition: all 0.5s ease-in-out
+    z-index: -1
+    animation: floatUpDown 3s ease-in-out infinite alternate
+
+.main-bgSix
+    position: absolute
+    right: 0
+    bottom: 0
+    background-repeat: no-repeat
+    background-position: right top
+    background-size: cover
+    width: 223px
+    height: 153px
+    transition: all 0.5s ease-in-out
+    z-index: -1
+    animation: floatUpDown 3s ease-in-out infinite alternate
+
+.main-bgSeven
+    position: absolute
+    right: 0
+    top: 50px
+    background-repeat: no-repeat
+    background-position: right top
+    background-size: cover
+    width: 180px
+    height: 132px
+    transition: all 0.5s ease-in-out
+    z-index: 1
+    animation: floatUpDown 3s ease-in-out infinite alternate
+    opacity: 0.6
+    @media only screen and (max-width: 991px)
+        &
+            width: 93px
+            height: 68px
+
+.main-bgEight
+    position: absolute
+    left: 0
+    bottom: 0
+    background-repeat: no-repeat
+    background-position: right top
+    background-size: cover
+    width: 194px
+    height: 224px
+    transition: all 0.5s ease-in-out
+    z-index: 1
+    animation: floatUpDown 3s ease-in-out infinite alternate
+    opacity: 0.6
+    @media only screen and (max-width: 991px)
+        &
+            width: 90px
+            height: 105px
+
+// Ключевые кадры анимации
+@keyframes floatUpDown
+    0%
+        transform: translateY(0)
+    100%
+        transform: translateY(-20px)
+
+@keyframes floatUpDownRotate
+    0%
+        transform: translateY(0) rotate(180deg)
+    100%
+        transform: translateY(-20px) rotate(180deg)
+
+.about
+    overflow-y: auto
+    scroll-behavior: smooth
+    .thumbnail
+        img
+            border-radius: 30px
+            max-height: 521px
+            max-width: 536px
+            object-fit: cover
+            object-position: 30% 30%
+        .about-thumbnail
+            border-radius: 30px 70px
+            position: absolute
+            top: 23%
+            right: 0
+            max-width: 281px
+            max-height: 244px
+            width: 100%
+            height: 100%
+            img
+                border-radius: 30px 70px
+                border: 10px solid $white
+        @media (max-width: 1199px)
+            .about-thumbnail
+                max-width: 160px
+        @media (max-width: 992px)
+            .about-thumbnail
+                max-width: 150px
+        @media (max-width: 767px)
+            .about-thumbnail
+                max-width: 240px
+        @media (max-width: 480px)
+            .about-thumbnail
+                max-width: 190px
+    .small-slogan
+        margin-bottom: 30px
+        .icon
+            margin-right: 20px
+            svg
+                width: 30px
+    .description
+        p 
+            letter-spacing: .2px
+    .advantages
+        .title
+            margin: 40px 0px 30px 0px
+        .icon
+            width: 50px
+            margin-right: 20px
+            svg
+                width: 100%
+                height: auto
+                min-width: 50px
+                
+.price
+    overflow-y: auto
+    scroll-behavior: smooth
+    margin-top: 200px
+    .small-slogan
+        margin-bottom: 30px
+        .icon
+            margin-right: 20px
+            svg
+                width: 30px
+    @extend %btn-tabs
+    .card
+        box-shadow: -3px 4px 30px #e3e3e3
+        border-radius: 30px
+        transition: .5s ease
+        &:hover
+            box-shadow: 0px 0px 61px #e3e3e3
+    .card-body 
+        img
+            height: 260px
+            border-radius: 24px
+        svg
+            width: 30px
+            height: 30px
+    .price-sum
+        border-radius: 12px
+    .form-control
+        padding: 10px 20px
+        border-radius: 30px
+        box-shadow: none !important
+        padding-left: 50px
+    select
+        padding: 10px 20px
+        border-radius: 30px
+        box-shadow: none !important
+        height: 46px
+    .search-card svg
+        width: 24px
+        height: 24px
+        top: 12px
+        left: 18px
+        fill: $border
+    .card-footer
+        padding: 10px 0px
+        border-radius: 30px!important
+
+
+.team
+    margin-top: 150px
+    .small-slogan
+        margin-bottom: 30px
+        .icon
+            margin-right: 20px
+            svg
+                width: 50px
+    .description
+        .item
+            svg
+                min-width: 50px
+                max-width: 60px
+                width: 100%
+                height: 70px
+        .list-group-item 
+            svg
+                width: 20px
+    img
+        border-radius: 30px
+
+.gallery
+    margin-top: 150px
+    .small-slogan
+        margin-bottom: 30px
+        .icon
+            margin-right: 20px
+            svg
+                width: 30px
+    .img-item,
+    .img-itemSecond
+        overflow: hidden!important
+        position: relative
+        border-radius: 30px
+        img
+            transition: .5s ease
+        &:hover 
+            img
+                transform: scale(1.1)
+            .title-after
+                left: 30px
+            .title-before
+                right: 30px
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            z-index: 2
+        .title-after
+            top: 20px
+            left: 20px
+            z-index: 3
+            transition: .7s ease
+            @media (max-width: 470px)
+                &
+                    top: 10px
+                    left: 10px
+        .title-before
+            bottom: 20px
+            right: 20px
+            z-index: 3
+            transition: .7s ease
+            @media (max-width: 470px)
+                &
+                    bottom: 10px
+                    right: 10px
+    .img-itemSecond
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            z-index: 2
+    .modal-body
+        img
+            border-radius: 30px
+
+.contact
+    margin-top: 150px
+    .small-slogan
+        margin-bottom: 30px
+        .icon
+            margin-right: 20px
+            svg
+                width: 30px
+    .contact-item
+        svg
+            width: 30px
+        a
+            transition: .5s ease
+    .list-icon
+        gap: 30px
+        .icon-item
+            a
+                svg
+                    width: auto
+                    height: 20px
+                    transition: .3s ease
+                &:hover svg
+                    transform: scale(1.1)
+    iframe
+        border-radius: 30px
